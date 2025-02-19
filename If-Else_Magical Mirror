@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+
+    int N;
+    scanf("%d", &N);
+    
+    if(N <= 0) {
+        printf("The verdict for the number %d is: INVALID\n", N);
+        return 0;
+    }
+    int conditioncount = 0;
+    
+    if(N % 2 == 0 && N > 10)
+    {
+        conditioncount = conditioncount + 1;
+    }
+     if(N > 15 && N % 3 == 0) {
+         conditioncount = conditioncount + 1;
+     }
+    if(N % 7 == 0){
+        conditioncount = conditioncount + 1;
+    }
+    
+    if (conditioncount == 3) {
+        printf("The verdict for the number %d is: SUPERNATURAL\n", N);
+    }
+    else if(conditioncount == 2) {
+        printf("The verdict for the number %d is: MIRACULOUS\n", N);
+    }
+    else if(conditioncount == 1) {
+         printf("The verdict for the number %d is: MAGICAL\n", N);
+    }
+    else{
+         printf("The verdict for the number %d is: NORMAL\n", N);
+    }
+    
+   return 0;
+}
